@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to an external CSS file -->
+</head>
+<body>
+    <!-- Allows for my custom cursor -->
+    <div class="my-cursor" id="myCursor"></div>
+    <script src="script.js"></script>
+
+    <header>
+        <h1 class="bigTitle">Hello There!</h1>
+        <h2>My name is Michael Do</h2>
+        <p>Welcome to my Site!</p>
+    </header>
+
+    <main>
+        <section id="about" class="center">
+            <div class="section-container">
+                <div class="content">
+                    <h2 class="title">About Me!</h2>
+                    <ul class="list">
+                        <li>Currently attending California State University, Fullerton</li>
+                        <ul class="Sublist">
+                            <li>Pursuing a Bachelor's Degree in Computer Science</li>
+                            <li>Graduating in May 2026</li>
+                        </ul>
+                        <li>Prefers backend development </li>
+                        <ul class="Sublist">
+                            <li>Codes in mainly in Python and C++</li>
+                            <li>Learned coding through Java and Javascript in Highschool and gained interest in software engineering</li>
+                        </ul>
+                        <li>Enjoys gaming and watching anime in free time</li>
+                        <ul class="Sublist">
+                            <li>Mostly plays competitive shooter, like Counter Strike but playing through games developed by FromSoftware at the moment</li>                
+                        </ul>
+                </div>
+                <img src="image/csuf.png" class="about-image">
+            </div>
+        </section>
+
+        <section id="extracurriculars" class="center">
+            <div class="section-container">
+                <div class="content">
+                    <h2 class="title">Extracurriculars</h2>
+                    <ul class="list">
+                        
+                        <li>Attended Fullyhacks 2024 in Febuary hosted by ACMCSUF(02/2024)</li>
+                        <ul class="Sublist">
+                            <li>Developed first html project 'Neonify'</li>
+                        </ul>
+                        <li>Joined the Headstarter Software Engineering Fellowship (07/2024)</li>
+                        <ul class="Sublist">
+                            <li>Building 5 projects in a 7-week program including this site!</li>
+                        </ul>
+                    </ul>
+                </div>
+                <img src="image/brain.png" class="about-image">
+            </div>
+        </section>
+
+        <section id="experience" class="center">
+            <div class="section-container">
+                <div class="content">
+                    <h2 class="title">Experience</h2>
+                    <ul class="list">
+                        <li>Became a research assistant for Assure-US at CSUF (06/2023)</li>
+                        <ul class="Sublist">
+                            <li>Conducted data analysis mainly focusing on linear regression, to create machine
+                                learning models.</li>
+                            <li>Analyzed datasets of over 9000 students' SAT and ACT scores to create predictive 
+                                models for GPA scores, and leveraged this data to predict GPA scores
+                            </li>
+                            <li>Effectively communicated findings through Jupyter Notebook presentations.</li>
+                        </ul>
+                    </ul>
+                </div>
+                <img src="image/coding.png" class="about-image">
+            </div>
+        </section>
+
+        <section id="projects" class="center">
+            <div class="section-container"> 
+                <div class="content">
+                    <h2 class="title">My projects</h2>
+                    
+                    <!-- Stock Details -->
+                    <div class="project">
+                        <img src="image/stockproject.png" class="about-project-image" alt="Project 1">
+                        <div class="icon-container">
+                            <a href= "https://github.com/Avelez164/Market-Predictions" target="_blank" class="link">
+                                <img src="/image/codeicon.png" class="contact-icon" alt="GitHub">
+                            </a>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Market Predictions</h3>
+                            
+                            <ul class="list">
+                                <li>Developed a Stock Prediction and Analysis Web Application using Flask, Python, and machine learning
+                                    algorithms for predictive analytics</li>
+                                <li>Implemented real-time data integration with Yahoo Finance API to fetch current stock prices, market cap, and
+                                    historical data</li>
+                                <li>Utilized machine learning techniques, specifically Linear Regression, to predict future stock prices based on
+                                    historical data.</li>
+                                <li>Created an interactive web interface with HTML templates and CSS styling for a user-friendly experience.
+                                     </li>
+                                <ul class="Sublist">
+                                    <li>Frontend: HTML5, CSS3, Javascript</li>
+                                    <li>Backend: Python</li>
+                                    <li>Tools: Flask and Yahoo Finance (Python Libraries), Visual Studio Code IDE</li>
+                                </ul>
+                               
+                        </div>
+                    </div>
+
+                    <!-- Neonify -->
+                    <div class="project">
+                        <img src="image/neonifyproject.png" class="about-project-image" alt="Project 2">
+                        <div class="icon-container">
+                            <a href= "https://github.com/MichaelTDo/24-Hackathon" target="_blank" class="link">
+                                <img src="/image/codeicon.png" class="contact-icon" alt="GitHub">
+                            </a>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Neonify!</h3>
+                            <ul class="list">
+                                <li>Developed an interactive webpage for text transformation into a neon-style display.
+                                </li>
+                                <li>Used JavaScript functions to manage the color selection and styling of the text to achieve the neon effect.
+                                </li>
+                                <ul class="Sublist">
+                                    <li>Frontend: HTML, CSS, Javascript</li>
+                                    <li>Backend: None</li>
+                                    <li>Tools: Visual Studio Code IDE</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <img src="image/tuffy.png" class="about-project-image" alt="Project 3">
+                        <div class="icon-container">
+                            <a href="https://github.com/Michaeldo2004/publicHurdle" target="_blank" class="link">
+                                <img src="/image/codeicon.png" class="contact-icon" alt="GitHub">
+                            </a>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Project Hurdle</h3>
+                            <ul class="list">
+                                <li>Represented the game state with a C++ backend server using object-oriented programming concepts
+                                </li>
+                                <li>Demonstrated core concepts of object oriented programming to allow players to enjoy a smooth and seamless
+                                    experience.
+                                </li>
+                                <ul class="Sublist">
+                                    <li>Frontend: None</li>
+                                    <li>Backend: C++</li>
+                                    <li>Tools: Visual Studio Code IDE</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <img src="image/coinflip.png" class="about-project-image" alt="Project 4">
+                        <div class="icon-container">
+                            <a href= "https://github.com/MichaelTDo/Coin-Flip-Game" target="_blank" class="link">
+                                <img src="/image/codeicon.png" class="contact-icon" alt="GitHub">
+                            </a>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Coin Flipping game</h3>
+                            <ul class="list">
+                                <li>A simple coin flipping game implemented using Python and Tkinter.
+                                </li>
+                                <li>Uses a text file (coin_flip_logs.txt) that logs the result of each coinflip and guess
+                                </li>
+                                <ul class="Sublist">
+                                    <li>Frontend: None</li>
+                                    <li>Backend: Python</li>
+                                    <li>Tools: Tkinter (Python Library), Visual Studio Code IDE</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="center">
+            <div class="links-container">
+                <h2 class="title">My Links</h2>
+                <p>Here is my resume, a few relevant links, and how you can get in touch.</p>
+                <!-- Linkedin -->
+                <div class="icons-container">
+                    <div class="icon-container">
+                        <a href= "https://www.linkedin.com/in/michael-do-312a90242/" target="_blank" class="link">
+                            <img src="/image/linkedin.png" class="contact-icon" alt="LinkedIn">
+                        </a>
+                    </div>
+                    <!-- GitHub -->
+                    <div class="icon-container">
+                        <a href= "https://github.com/MichaelTDo" target="_blank" class="link">
+                            <img src="/image/github.png" class="contact-icon" alt="GitHub">
+                        </a>
+                    </div>
+                    <!-- Email -->
+                    <div class="icon-container">
+                        <a href="mailto:michaeldo1738@example.com?subject=Subject%20Here&body=Message%20body%20here" target="_blank" class="link">
+                            <img src="/image/gmail.png" class="contact-icon">
+                        </a>
+                    </div>
+                    <!-- Resume-->
+                    <div class="icon-container">
+                        <a href="image/Michael-Do-Resume.pdf" target="_blank" class="link">
+                            <img src="/image/resume.png" class="contact-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>Site last updated: 7/24/2024</footer>
+    </main>
+</body>
+</html>
