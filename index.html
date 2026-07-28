@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Site</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to an external CSS file -->
+</head>
+<body>
+    <!-- Allows for my custom cursor -->
+    <div class="my-cursor" id="myCursor"></div>
+    <nav class="in-page-nav" aria-label="In-page navigation">
+        <a href="#about">About Me!</a>
+        <a href="#extracurriculars">Extracurriculars</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">My projects</a>
+        <a href="#contact">My Links</a>
+    </nav>
+    <div class="image-popup" id="imagePopup" aria-hidden="true">
+        <div class="image-popup-content">
+            <button class="image-popup-close" id="imagePopupClose" aria-label="Close image popup">x</button>
+            <img id="imagePopupImg" alt="">
+            <p class="image-popup-description" id="imagePopupDescription"></p>
+        </div>
+    </div>
+    <div class="color-popup" id="colorPopup" aria-hidden="true">
+        <div class="color-popup-panel">
+            <button class="color-popup-close" id="colorPopupClose" aria-label="Close color popup">x</button>
+            <input type="color" id="cursorColorInput" value="#ffffff" aria-label="Choose cursor color">
+            <button class="color-popup-done" id="colorPopupDone">Done</button>
+        </div>
+    </div>
+    <div class="repo-popup" id="repoPopup" aria-hidden="true">
+        <div class="repo-popup-panel">
+            <button class="repo-popup-close" id="repoPopupClose" aria-label="Close repository popup">x</button>
+            <p>Repository unavailable.</p>
+            <div class="repo-popup-actions">
+                <button id="repoPopupCloseButton">Close</button>
+                <button id="repoPopupRedirectButton">Redirect</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <header>
+        <h1 class="bigTitle">Hello There!</h1>
+        <h2>My name is Michael Do</h2>
+        <p>Welcome to my Site!</p>
+        <label class="theme-switch" aria-label="Toggle dark/light mode">
+            <input type="checkbox" id="themeToggle">
+            <span class="theme-slider"></span>
+        </label>
+        <button class="color-wheel-button" id="colorWheelButton" aria-label="Choose cursor color"></button>
+    </header>
+
+    <main>
+        <section id="about" class="center">
+            <div class="section-container">
+                <div class="content">
+                    <h2 class="title">About Me!</h2>
+                    <ul class="list">
+                        <li>Computer Science student at California State University, Fullerton</li>
+                        <ul class="Sublist">
+                            <li>Graduating in 2026 with a 3.7 GPA</li>
+                            <li>Focused on backend development, full-stack applications, and applied AI systems</li>
+                        </ul>
+                        <li>Builds software with Python, TypeScript, JavaScript, C++, React, SvelteKit, Django REST Framework, FastAPI, and SQL</li>
+                        <ul class="Sublist">
+                            <li>Most interested in building practical systems with clean APIs, useful data models, and usable interfaces</li>
+                        </ul>
+                        <li>Outside of programming</li>
+                        <ul class="Sublist">
+                            <li>Enjoys working out, competitive games, anime, and working through FromSoftware games</li>
+                        </ul>
+                </div>
+                <img src="image/csuf.png" class="about-image" data-description="California State University, Fullerton campus.">
+            </div>
+        </section>
+
+        <section id="extracurriculars" class="center">
+            <div class="section-container">
+                <div class="content">
+                    <h2 class="title">Extracurriculars</h2>
+                    <ul class="list">
+                        
+                        <li>FullyHacks 2024 hosted by ACM CSUF (02/2024)</li>
+                        <ul class="Sublist">
+                            <li>Built Neonify, my first HTML project, in a hackathon environment</li>
+                        </ul>
+                        <li>FullyHacks 2026 hosted by ACM CSUF (04/2026)</li>
+                        <ul class="Sublist">
+                            <li>Built DeepDelta, a Next.js and TypeScript app using RAG concepts and multiple AI APIs</li>
+                            <li>Worked with Claude, GPT-4o, Gemini, and Human Delta APIs to compare raw model outputs against source-backed responses</li>
+                        </ul>
+                    </ul>
+                </div>
+                <img src="image/brain.png" class="about-image">
+            </div>
+        </section>
+
+        <section id="experience" class="center">
+            <div class="section-container">
+                <div class="content">
+                    <h2 class="title">Experience</h2>
+                    <ul class="list">
+                        <li>Became a research assistant for Assure-US at CSUF (06/2023)</li>
+                        <ul class="Sublist">
+                            <li>Conducted data analysis with scikit-learn, Pandas, and Numpy, mainly focusing on linear regression, to create machine learning models.</li>
+                            <li>Processed and analyzed datasets of 9000+ students' SAT and ACT scores to predict GPA outcomes</li>
+                            <li>Presented insights and model results through structured Jupyter Notebook presentations to a large academic audience.</li>
+                        </ul>
+                    </ul>
+                </div>
+                <img src="image/coding.png" class="about-image">
+            </div>
+        </section>
+
+        <section id="projects" class="center">
+            <div class="section-container"> 
+                <div class="content">
+                    <h2 class="title">My projects</h2>
+                    <!-- Connect4Web -->
+                    <div class="project">
+                        <img src="image/connect4web.png" class="about-project-image" alt="Connect4Web project gameplay screen" data-description="Connect4Web project gameplay screen.">
+                        <div class="icon-container">
+                            <a href="https://github.com/Michaeldo2004/Connect4web" target="_blank" class="link">
+                                <img src="image/codeicon.png" class="contact-icon" alt="GitHub">
+                            </a>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Connect4Web</h3>
+                            <ul class="list">
+                                <li>Built a full-stack Connect 4 web application supporting authenticated single player and real-time multiplayer gameplay, reconnect handling, game persistence, and post-game analysis.</li>
+                                <li>Implemented and evaluated an iterative-deepening Minimax algorithm with alpha-beta pruning, heuristic board evaluation, time-bounded search, and a 12,000-state transposition cache across four difficulty levels.</li>
+                                <li>Leveraged Claude and OpenAI Codex for architecture analysis, implementation, debugging, and test generation, verifying AI-assisted changes through 187 automated tests and shared JSON Schema contracts.</li>
+                                <ul class="Sublist">
+                                    <li>Frontend: React</li>
+                                    <li>Backend: Flask, Python</li>
+                                    <li>Tools: Socket.IO, Supabase, Claude, OpenAI Codex</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Logic Grid Puzzle -->
+                    <div class="project">
+                        <img src="image/logicgridpuzzle.png" class="about-project-image" alt="Project 1" data-description="Landing page of my Logic Grid Puzzle capstone project.">
+                        <div class="icon-container">
+                            <a href= "https://github.com/Michaeldo2004/Logic-Grid-Puzzle" target="_blank" class="link">
+                                <img src="image/codeicon.png" class="contact-icon" alt="GitHub">
+                            </a>
+                        </div>
+                
+                        <div class="project-details">
+                            <h3 class="project-title">Logic Grid Puzzle</h3>
+                            
+                            <ul class="list">
+                                <li>Designed and implemented a full-stack leaderboard system using SvelteKit and Django REST Framework with filtering,
+sorting, and paginated results, displaying contextual rank and top-percentile stats for authenticated users</li>
+                                <li>Built a user profile dashboard in SvelteKit aggregating personalized solve history with searchable, filterable statistics,
+leveraging Svelte 5 reactive state management</li>
+                                <li>Architected a relational database schema in PostgreSQL via Supabase, designing normalized tables with foreign key
+constraints across 6+ tracked fields per record including puzzle metadata and solve time</li>
+                                <li>Developed end-to-end user authentication with Google OAuth 2.0, email/password login, and session management
+using Django REST Framework, with client-side auth state handled via Svelte stores and input sanitization
+</li>
+                                <ul class="Sublist">
+                                    <li>Frontend: SvelteKit, Svelte 5, TypeScript, HTML/CSS</li>
+                                    <li>Backend: Python, Django REST Framework, Supabase, PostgreSQL</li>
+                                    <li>Tools: Git, Vercel, Render, Google OAuth 2.0</li>
+                                </ul>
+                               
+                        </div>
+                    </div>    
+                    <!-- DeepDelta -->
+                    <div class="project">
+                        <img src="image/deepdelta.png" class="about-project-image" alt="Project 2" data-description="Landing page of my DeepDelta FullyHacks 2026 project.">
+                        <div class="icon-container">
+                            <a href= "https://github.com/Michaeldo2004/FullyHack" target="_blank" class="link">
+                                <img src="image/codeicon.png" class="contact-icon" alt="GitHub">
+                            </a>
+                        </div>
+                
+                        <div class="project-details">
+                            <h3 class="project-title">DeepDelta</h3>
+                            
+                            <ul class="list">
+                                <li>Architected a Retrieval-Augmented Generation (RAG) pipeline using Next.js, TypeScript, Anthropic API to ground LLM responses against a curated knowledge corpus, reducing hallucination</li>
+                                <li>Engineered a structured output validation system using Claude with forced tool-use, producing a weighted 0–100 confidence score surfacing gaps, conflicts, and decay flags</li>
+                                <li>Built a full-stack comparison UI contrasting raw Claude, GPT-4o, and Gemini 2.5 Flash outputs against verified, source-cited responses via REST API integration</li>
+                                <li>Increased system fault tolerance by integrating Human Delta vector search and filesystem APIs with graceful fallback mechanisms, ensuring pipeline stability across retrieval backend failures</li>
+                                <ul class="Sublist">
+                                    <li>Frontend: Next.js, React, TypeScript, Tailwind CSS</li>
+                                    <li>Backend: Next.js API Routes, Anthropic SDK, OpenAI SDK, Google Gemini API, Human Delta API</li>
+                                    <li>Tools: Git, Vercel</li>
+                                </ul>
+                               
+                        </div>
+                    </div>
+                    <!-- Collaborative Whiteboard -->
+                    <div class="project">
+                        <img src="image/whiteboard.png" class="about-project-image" alt="Project 3" data-description="Collaborative whiteboard project interface.">
+                        <div class="icon-container">
+                            <a href= "https://github.com/Michaeldo2004/whiteboard_449" target="_blank" class="link">
+                                <img src="image/codeicon.png" class="contact-icon" alt="GitHub">
+                            </a>
+                        </div>
+                         <div class="icon-container">
+                            <a href= "https://github.com/Michaeldo2004/whiteboard_449_backend" target="_blank" class="link">
+                                <img src="image/codeicon.png" class="contact-icon" alt="GitHub">
+                            </a>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Collaborative Whiteboard</h3>
+                            
+                            <ul class="list">
+                                <li>Built real-time collaborative whiteboard with chat function using the existing Excalidraw using FastAPI and React (Vite)</li>
+                                <li>Secured the application with JWT-based authentication via Supabase, including rolebased access control</li>
+                                <li>Designed and implemented RESTful FastAPI endpoints for projects, whiteboards, chat history, and user onboarding.</li>
+                                <li>Implemented CRUD operations and persistent state using Supabase database functions and RPCs, enabling collaborator invitations and multi-user sessions. </li>
+                                <ul class="Sublist">
+                                    <li>Frontend: HTML5, CSS3, Javascript, React, Vite</li>
+                                    <li>Backend: Python, FastAPI</li>
+                                    <li>Tools: Tanstack, Supabase, JWT, Visual Studio Code IDE</li>
+                                </ul>
+                               
+                        </div>
+                    </div>
+                    <!-- Stock Details -->
+                    <div class="project">
+                        <img src="image/stockproject.png" class="about-project-image" alt="Project 4" data-description="Market prediction project interface.">
+                        <div class="icon-container">
+                            <a href= "https://github.com/Avelez164/Market-Predictions" target="_blank" class="link">
+                                <img src="image/codeicon.png" class="contact-icon" alt="GitHub">
+                            </a>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Market Predictions</h3>
+                            
+                            <ul class="list">
+                                <li>Developed a Stock Prediction and Analysis Web Application using Flask, Python, and machine learning
+                                    algorithms for predictive analytics</li>
+                                <li>Implemented real-time data integration with Yahoo Finance API to fetch current stock prices, market cap, and
+                                    historical data</li>
+                                <li>Applied Linear Regression to historical financial data and integrated an interactive Flask frontend.</li>
+                                <li>Created an interactive web interface with HTML templates and CSS styling for a user-friendly experience.
+                                     </li>
+                                <ul class="Sublist">
+                                    <li>Frontend: HTML5, CSS3, Javascript</li>
+                                    <li>Backend: Python</li>
+                                    <li>Tools: Flask and Yahoo Finance (Python Libraries), Visual Studio Code IDE</li>
+                                </ul>
+                               
+                        </div>
+                    </div>
+                    
+                    <!-- Connect 4 -->
+                    <div class="project">
+                        <img src="image/connect-4.png" class="about-project-image" alt="Project 5" data-description="Connect 4 AI project gameplay screen.">
+                        <div class="icon-container">
+                            <a href= "https://github.com/Michaeldo2004/Connect-4-AI" target="_blank" class="link">
+                                <img src="image/codeicon.png" class="contact-icon" alt="GitHub">
+                            </a>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Connect 4</h3>
+                            <ul class="list">
+                                <li>Developed an AI-powered Connect 4 game using Minimax with alpha-beta pruning, enabling strategic gameplay against both local and simulated online AIs.
+                                </li>
+                                <li>Engineered a simulation suite that ran over 100 automated matches between Minimax and online AIs,
+                                    showcasing consistently balanced results and validating the effectiveness of evaluation heuristics in diverse match scenarios.
+                                </li>
+                                <li>Created evaluation tools to benchmark AI agents, automating win/tie/loss tracking and enabling performance analysis across 10+ match iterations.
+                                </li>
+                                <ul class="Sublist">
+                                    <li>Backend: Python</li>
+                                    <li>Tools: Visual Studio Code IDE</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Galaga -->
+                    <div class="project">
+                        <img src="image/galaga.png" class="about-project-image" alt="Galaga gameplay screen" data-description="Galaga gameplay screen.">
+                        <div class="icon-container">
+                            <a href="#" class="link private-repo-link" data-repo-url="https://github.com/Michaeldo2004/cpsc-386-06-galaga-Michaeldo2004-1">
+                                <img src="image/codeicon.png" class="contact-icon" alt="GitHub">
+                            </a>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Galaga</h3>
+                            <ul class="list">
+                                <li>Developed a Python/Pygame arcade shooter game Galaga with a title scene, gameplay scene, game over scene, and persistent leaderboard scene.</li>
+                                <li>Implemented enemy wave management with randomized 20-80 enemy levels, formation movement, entry groups, diving attacks, enemy shooting, and increasing difficulty between levels.</li>
+                                <li>Built player movement, shooting, collision detection, scoring, lives, extra-life rewards, explosion effects, sound effects, and soundtrack support using object-oriented game classes.</li>
+                                <ul class="Sublist">
+                                    <li>Backend: Python</li>
+                                    <li>Tools: Pygame, Pickle, Visual Studio Code IDE</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Pong -->
+                    <div class="project">
+                        <img src="image/pong.png" class="about-project-image" alt="Pong gameplay screen" data-description="Pong gameplay screen.">
+                        <div class="icon-container">
+                            <a href="#" class="link private-repo-link" data-repo-url="https://github.com/Michaeldo2004/cpsc-386-05-pong-Michaeldo2004">
+                                <img src="image/codeicon.png" class="contact-icon" alt="GitHub">
+                            </a>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Pong</h3>
+                            <ul class="list">
+                                <li>Developed a Python/Pygame Pong game with a human-controlled paddle, AI opponent, title scene, gameplay scene, and win scene.</li>
+                                <li>Implemented ball physics using Pygame Vector2 reflection for wall and paddle collisions, randomized serves, goal detection, and first-to-three scoring.</li>
+                                <li>Added sound effects for paddle hits, wall bounces, and scoring, with scene-based game flow for replaying or quitting after a winner is declared.</li>
+                                <ul class="Sublist">
+                                    <li>Backend: Python</li>
+                                    <li>Tools: Pygame, Visual Studio Code IDE</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Tic Tac Toe -->
+                    <div class="project">
+                        <img src="image/tictactoe.png" class="about-project-image" alt="Tic Tac Toe gameplay screen" data-description="Tic Tac Toe gameplay screen.">
+                        <div class="icon-container">
+                            <a href="#" class="link private-repo-link" data-repo-url="https://github.com/Michaeldo2004/cpsc-386-04-tictactoe-Michaeldo2004">
+                                <img src="image/codeicon.png" class="contact-icon" alt="GitHub">
+                            </a>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Tic Tac Toe</h3>
+                            <ul class="list">
+                                <li>Developed a Python/Pygame Tic Tac Toe game with a mouse-controlled human player against a robot opponent.</li>
+                                <li>Implemented a 3x3 board system with grid-click detection, move validation, win detection across rows, columns, and diagonals, draw detection, and game restart flow.</li>
+                                <li>Built custom Pygame sprite surfaces for X and O rendering, plus bot move logic that prioritizes center, corners, and remaining open spaces.</li>
+                                <ul class="Sublist">
+                                    <li>Backend: Python</li>
+                                    <li>Tools: Pygame, Visual Studio Code IDE</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Blackjack -->
+                    <div class="project">
+                        <img src="image/blackjack.png" class="about-project-image" alt="Blackjack terminal game screen" data-description="Blackjack terminal game screen.">
+                        <div class="icon-container">
+                            <a href="#" class="link private-repo-link" data-repo-url="https://github.com/Michaeldo2004/cpsc-386-02-blackjack-Michaeldo2004">
+                                <img src="image/codeicon.png" class="contact-icon" alt="GitHub">
+                            </a>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Blackjack</h3>
+                            <ul class="list">
+                                <li>Developed a terminal-based Blackjack game supporting 1-4 players against an AI dealer using standard Blackjack hit, stand, bust, push, and dealer rules.</li>
+                                <li>Implemented an 8-deck card shoe with shuffling, cut-card behavior, wagers, hand-value calculation with Ace handling, blackjack detection, and round result payouts.</li>
+                                <li>Built persistent player bankroll storage with Python Pickle so returning players can reload saved balances across game sessions.</li>
+                                <ul class="Sublist">
+                                    <li>Backend: Python</li>
+                                    <li>Tools: Python Standard Library, Pickle, Visual Studio Code IDE</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Neonify -->
+                    <div class="project">
+                        <img src="image/neonifyproject.png" class="about-project-image" alt="Neonify landing page" data-description="Neonify hackathon project landing page.">
+                        <div class="icon-container">
+                            <a href= "https://github.com/MichaelTDo/24-Hackathon" target="_blank" class="link">
+                                <img src="image/codeicon.png" class="contact-icon" alt="GitHub">
+                            </a>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Neonify!</h3>
+                            <ul class="list">
+                                <li>Developed an interactive webpage for text transformation into a neon-style display.
+                                </li>
+                                <li>Used JavaScript functions to manage the color selection and styling of the text to achieve the neon effect.
+                                </li>
+                                <ul class="Sublist">
+                                    <li>Frontend: HTML, CSS, Javascript</li>
+                                    <li>Backend: None</li>
+                                    <li>Tools: Visual Studio Code IDE</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <img src="image/tuffy.png" class="about-project-image" alt="Project 7" data-description="Project Hurdle game screen.">
+                        <div class="icon-container">
+                            <a href="https://github.com/Michaeldo2004/publicHurdle" target="_blank" class="link">
+                                <img src="image/codeicon.png" class="contact-icon" alt="GitHub">
+                            </a>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Project Hurdle</h3>
+                            <ul class="list">
+                                <li>Represented the game state with a C++ backend server using object-oriented programming concepts
+                                </li>
+                                <li>Demonstrated core concepts of object oriented programming to allow players to enjoy a smooth and seamless
+                                    experience.
+                                </li>
+                                <ul class="Sublist">
+                                    <li>Frontend: None</li>
+                                    <li>Backend: C++</li>
+                                    <li>Tools: Visual Studio Code IDE</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <img src="image/coinflip.png" class="about-project-image" alt="Project 8" data-description="Coin flipping game screen.">
+                        <div class="icon-container">
+                            <a href= "https://github.com/MichaelTDo/Coin-Flip-Game" target="_blank" class="link">
+                                <img src="image/codeicon.png" class="contact-icon" alt="GitHub">
+                            </a>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Coin Flipping game</h3>
+                            <ul class="list">
+                                <li>A simple coin flipping game implemented using Python and Tkinter.
+                                </li>
+                                <li>Uses a text file (coin_flip_logs.txt) that logs the result of each coinflip and guess
+                                </li>
+                                <ul class="Sublist">
+                                    <li>Frontend: None</li>
+                                    <li>Backend: Python</li>
+                                    <li>Tools: Tkinter (Python Library), Visual Studio Code IDE</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="center">
+            <div class="links-container">
+                <h2 class="title">My Links</h2>
+                <p>Here is my resume, a few relevant links, and how you can get in touch.</p>
+                <!-- Linkedin -->
+                <div class="icons-container">
+                    <div class="icon-container">
+                        <a href= "https://www.linkedin.com/in/michael-do-312a90242/" target="_blank" class="link">
+                            <img src="image/linkedin.png" class="contact-icon" alt="LinkedIn">
+                        </a>
+                    </div>
+                    <!-- GitHub -->
+                    <div class="icon-container">
+                        <a href= "https://github.com/MichaelTDo" target="_blank" class="link">
+                            <img src="image/github.png" class="contact-icon" alt="GitHub">
+                        </a>
+                    </div>
+                    <!-- Email -->
+                    <div class="icon-container">
+                        <a href="mailto:michaeldo1738@example.com?subject=Subject%20Here&body=Message%20body%20here" target="_blank" class="link">
+                            <img src="image/gmail.png" class="contact-icon">
+                        </a>
+                    </div>
+                    <!-- Resume-->
+                    <div class="icon-container">
+                        <a href="image/Michael-Do-Resume.pdf" target="_blank" class="link">
+                            <img src="image/resume.png" class="contact-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>Site last updated: 7/28/2026</footer>
+    </main>
+</body>
+</html>
